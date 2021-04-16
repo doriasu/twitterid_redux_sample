@@ -8,7 +8,7 @@ const TwitterLogin: FC = () => {
 				.auth()
 				.getRedirectResult()
 				.then((result) => {
-					console.log(result.additionalUserInfo?.username);
+					console.log(result.additionalUserInfo);
 					setUserInfo(result.additionalUserInfo?.username ? result.additionalUserInfo?.username : "");
 				});
 		})();
